@@ -23,10 +23,6 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 //【PHP/Laravel】04 Routing
-//課題3
-Route::get('XXX', 'AAAController@bbb');
-
-//【PHP/Laravel】04 Routing
 //課題4
 Route::group(['prefix' => 'admin'], function() {
     Route::get('profile/create', 'Admin\ProfileController@add');
