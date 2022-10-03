@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +20,8 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('news/create', 'Admin\NewsController@add');
-});
-
-
-//【PHP/Laravel】04 Routing
-//課題4
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('profile/create', 'Admin\ProfileController@add');
-    Route::get('profile/edit', 'Admin\ProfileController@edit');
+    //Route::get('news/create', 'Admin\NewsController@add');
+    Route::get('/news/create', [NewsController::class, 'add']);
+    Route::get('/profile/create', [ProfileController::class, 'add']);
+    Route::get('/profile/edit', [ProfileController::class, 'edit']);
 });
