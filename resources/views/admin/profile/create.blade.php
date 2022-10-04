@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,4 +10,21 @@
     <body>
         <h1>create.blede.php</h1>
     </body>
-</html>
+</html-->
+
+{{-- layouts/admin.blade.phpを読み込む --}}
+@extends('layouts.admin')
+
+{{-- admin.blade.phpの@yield('title')に'タイトル'を埋め込む --}}
+@section('title', 'myProfile')
+
+{{-- admin.blade.phpの@yield('content')に以下のタグを埋め込む --}}
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>myProfile</h2>
+            </div>
+        </div>
+    </div>
+@endsection
