@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 style="margin-bottom:20px">myProfile</h2>
+                <h2 style="margin-bottom:20px">myProfileaa</h2>
 
                 <form action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
 
@@ -35,7 +35,7 @@
                         </ul>
                     @endif
                     <div class="form-group row" style="margin-bottom:20px">
-                        <label class="col-md-2">氏名</label>
+                        <label class="col-md-2">氏名aa</label>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
