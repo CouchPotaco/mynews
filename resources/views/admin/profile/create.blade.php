@@ -13,7 +13,7 @@
 </html-->
 
 {{-- layouts/admin.blade.phpを読み込む --}}
-@extends('layouts.admin')
+@extends('layouts.profile')
 
 {{-- admin.blade.phpの@yield('title')に'タイトル'を埋め込む --}}
 @section('title', 'myProfile')

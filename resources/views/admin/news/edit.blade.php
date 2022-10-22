@@ -48,7 +48,19 @@
                         </div>
                     </div>
                 </form>
+                
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <h2>編集履歴</h2>
+                        <ul class="list-group">
+                            @foreach ($news_form->histories as $history)
+                                <li class="list-group-item" style="color:#fff;">{{ $history->edited_at }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
-@endsection
+@endsection    

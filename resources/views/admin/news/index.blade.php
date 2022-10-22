@@ -38,7 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $news)
+                            @foreach($posts as $news) 
                                 <tr>
                                     <th>{{ $news->id }}</th>
                                     <td>{{ Str::limit($news->title, 100) }}</td>

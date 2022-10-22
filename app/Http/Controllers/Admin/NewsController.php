@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\News;
+use App\Models\History;
+use Carbon\Carbon;
+
 
 class NewsController extends Controller
 {
@@ -64,7 +67,7 @@ class NewsController extends Controller
             abort(404);
         }
         return view('admin.news.edit', ['news_form' => $news]);
-    }
+    } 
 
     public function update(Request $request)
     {
@@ -90,6 +93,12 @@ class NewsController extends Controller
 
         // 該当するデータを上書きして保存する
         $news->fill($news_form)->save();
+        
+        // 編集履歴を追加
+        $history = new History();
+        $history->news_id = $news->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
 
         return redirect('admin/news');
     }    
