@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 style="margin-bottom:20px">myProfileaa</h2>
+                <h2 style="margin-bottom:20px">myProfile</h2>
 
                 <form action="{{ route('admin.profile.create') }}" method="post" enctype="multipart/form-data">
 
