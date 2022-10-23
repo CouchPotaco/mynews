@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProfHistory extends Model
+class History extends Model
 {
     use HasFactory;
 
@@ -19,6 +19,6 @@ class ProfHistory extends Model
     // ProfHistory Modelに関連付けを行う
     public function histories()
     {
-        return $this->hasMany('App\Models\ProfHistory');
+        return $this->hasMany('App\Models\History');
     }
 }
